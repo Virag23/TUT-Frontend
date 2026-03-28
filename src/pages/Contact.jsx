@@ -89,9 +89,9 @@ export default function Contact() {
 
                 <div style={{ display: 'flex', flexDirection: 'column', gap: '24px', marginBottom: '32px' }}>
                   {[
-                    { icon: <FaMapMarkerAlt />, label: 'Office Address', value: 'Nagpur – Bhandara Road, Nagpur, Maharashtra – 440 035, India' },
-                    { icon: <FaPhone />, label: 'Phone', value: '+91 9X XXXX XXXX' },
-                    { icon: <FaEnvelope />, label: 'Email', value: 'info@tirupatiroadlines.com' },
+                    { icon: <FaMapMarkerAlt />, label: 'Office Address', value: 'Plot No. 1, Tirupati Nagar, Nagpur–Bhandara Road, Nagpur, Maharashtra – 440 035, India' },
+                    { icon: <FaPhone />, label: 'Phone', value: '+91 84461 23777 / +91 93712 37770' },
+                    { icon: <FaEnvelope />, label: 'Email', value: 'tirupatiunion@gmail.com' },
                     { icon: <FaClock />, label: 'Working Hours', value: 'Mon–Sat: 9:00 AM – 7:00 PM IST' },
                   ].map((c, i) => (
                     <motion.div key={i} variants={fadeUp} style={{ display: 'flex', gap: '16px', alignItems: 'flex-start' }}>
@@ -107,22 +107,28 @@ export default function Contact() {
                 </div>
 
                 {/* WhatsApp CTA */}
-                <motion.a variants={fadeUp} href="https://wa.me/919XXXXXXXXX" target="_blank" rel="noopener noreferrer"
+                <motion.a variants={fadeUp} href="https://wa.me/918446123777" target="_blank" rel="noopener noreferrer"
                   className="btn"
                   style={{ background: 'linear-gradient(135deg, #25d366, #128C7E)', color: '#fff', marginBottom: '32px', display: 'inline-flex' }}>
                   <FaWhatsapp size={18} /> Chat on WhatsApp
                 </motion.a>
 
                 {/* Map Embed */}
-                <motion.div variants={fadeUp} style={{ borderRadius: 'var(--radius-md)', overflow: 'hidden', border: '1px solid var(--glass-border)' }}>
-                  <iframe
-                    title="Tirupati Road Lines Location"
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d59793.15671890082!2d79.01648567499999!3d21.14557775!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bd4c0a5a31faf7b%3A0x17a8c76e4b9c5a2e!2sNagpur%2C%20Maharashtra!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin"
-                    width="100%" height="280"
-                    style={{ border: 0, display: 'block' }}
-                    allowFullScreen="" loading="lazy"
-                    referrerPolicy="no-referrer-when-downgrade"
-                  />
+                <motion.div variants={fadeUp}>
+                  <div style={{ borderRadius: 'var(--radius-md)', overflow: 'hidden', border: '1px solid var(--glass-border)', marginBottom: '12px' }}>
+                    <iframe
+                      title="Tirupati Road Lines Location"
+                      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3721.0!2d79.08820!3d21.14580!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bd4c7b0b0b0b0b1%3A0x0!2sTirupati+Road+Lines+Pvt+Ltd%2C+Nagpur%E2%80%93Bhandara+Road%2C+Nagpur!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin"
+                      width="100%" height="280"
+                      style={{ border: 0, display: 'block' }}
+                      allowFullScreen="" loading="lazy"
+                      referrerPolicy="no-referrer-when-downgrade"
+                    />
+                  </div>
+                  <a href="https://maps.app.goo.gl/qaReP8DENeUhBfXA9" target="_blank" rel="noopener noreferrer"
+                    style={{ display: 'inline-flex', alignItems: 'center', gap: '6px', color: 'var(--gold)', fontSize: '0.82rem', fontWeight: 600, letterSpacing: '0.5px' }}>
+                    <FaMapMarkerAlt size={12} /> Open in Google Maps ↗
+                  </a>
                 </motion.div>
               </motion.div>
             </div>

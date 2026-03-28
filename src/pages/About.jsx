@@ -51,10 +51,10 @@ const directors = [
 ];
 
 const legalCards = [
-  { label: 'PAN Number', value: 'XXXXX0000X', icon: <MdVerified size={20} />, desc: 'Permanent Account Number — Income Tax Dept.' },
-  { label: 'GST Registration', value: '27XXXXX0000X1ZX', icon: <FaShieldAlt size={18} />, desc: 'Maharashtra State GST' },
-  { label: 'Udyam Aadhar', value: 'UDYAM-MH-XX-0000000', icon: <MdVerified size={20} />, desc: 'MSME Ministry Registration' },
-  { label: 'CIN Number', value: 'U60232MH2013PTC000000', icon: <FaShieldAlt size={18} />, desc: 'MCA Company Identification No.' },
+  { label: 'PAN Number', value: 'AMLPJ9316K', icon: <MdVerified size={20} />, desc: 'Permanent Account Number — Income Tax Dept.' },
+  { label: 'GST Registration', value: '27AMLPJ9316K2ZJ', icon: <FaShieldAlt size={18} />, desc: 'Maharashtra State GST' },
+  { label: 'Udyam Aadhar', value: 'UDYAM-MH-20-0015355', icon: <MdVerified size={20} />, desc: 'MSME Ministry Registration' },
+  { label: 'CIN Number', value: 'U60232MH2013PTC248XXX', icon: <FaShieldAlt size={18} />, desc: 'MCA Company Identification No.' },
 ];
 
 const groupEntities = [

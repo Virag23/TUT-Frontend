@@ -181,16 +181,20 @@ export default function Fleet() {
               <p className="section-subtitle">Our headquarters on Nagpur–Bhandara Road is the nerve center for operations covering 28+ states.</p>
             </motion.div>
           </Section>
-          <div style={{ height: '440px', borderRadius: 'var(--radius-md)', overflow: 'hidden', border: '1px solid var(--glass-border)' }}>
+          <div style={{ height: '440px', borderRadius: 'var(--radius-md)', overflow: 'hidden', border: '1px solid var(--glass-border)', marginBottom: '12px' }}>
             <iframe
               title="Tirupati Road Lines — Nagpur HQ"
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d238095.63!2d79.0882!3d21.1458!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bd4c0a5a31faf7b%3A0x17a8c76e4b9c5a2e!2sNagpur%2C%20Maharashtra!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3721.0!2d79.08820!3d21.14580!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bd4c7b0b0b0b0b1%3A0x0!2sTirupati+Road+Lines+Pvt+Ltd%2C+Nagpur%E2%80%93Bhandara+Road%2C+Nagpur!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin"
               width="100%" height="100%"
               style={{ border: 0, display: 'block', filter: 'invert(90%) hue-rotate(180deg) brightness(0.85)' }}
               allowFullScreen="" loading="lazy"
               referrerPolicy="no-referrer-when-downgrade"
             />
           </div>
+          <a href="https://maps.app.goo.gl/qaReP8DENeUhBfXA9" target="_blank" rel="noopener noreferrer"
+            style={{ display: 'inline-flex', alignItems: 'center', gap: '6px', color: 'var(--gold)', fontSize: '0.82rem', fontWeight: 600 }}>
+            <FaTruck size={12} /> Get Directions to Our HQ ↗
+          </a>
         </div>
       </section>
 

@@ -1,7 +1,23 @@
-import { useEffect, useRef } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { motion, useInView } from 'framer-motion';
-import CountUp from 'react-countup';
+
+function AnimatedNumber({ end, suffix, active }) {
+  const [display, setDisplay] = useState(0);
+  useEffect(() => {
+    if (!active) return;
+    const duration = 2000;
+    const start = performance.now();
+    const step = (now) => {
+      const p = Math.min((now - start) / duration, 1);
+      setDisplay(Math.floor(p * end));
+      if (p < 1) requestAnimationFrame(step);
+      else setDisplay(end);
+    };
+    requestAnimationFrame(step);
+  }, [active, end]);
+  return <>{display}{suffix}</>;
+}
 import { FaTruck, FaIndustry, FaCog, FaArrowRight, FaCheckCircle, FaStar, FaPhone, FaWhatsapp } from 'react-icons/fa';
 import { MdLocalShipping, MdVerified, MdSpeed } from 'react-icons/md';
 
@@ -111,7 +127,7 @@ export default function Home() {
               <Link to="/fleet" className="btn btn-outline" style={{ fontSize: '1rem', padding: '16px 36px' }}>
                 Explore Fleet <FaArrowRight />
               </Link>
-              <a href="https://wa.me/919XXXXXXXXX" target="_blank" rel="noopener noreferrer"
+              <a href="https://wa.me/918446123777" target="_blank" rel="noopener noreferrer"
                 className="btn"
                 style={{ fontSize: '1rem', padding: '16px 28px', background: 'rgba(37,211,102,0.15)', border: '1.5px solid rgba(37,211,102,0.4)', color: '#25d366' }}>
                 <FaWhatsapp size={18} />
@@ -146,7 +162,7 @@ export default function Home() {
                 style={{ textAlign: 'center', padding: '28px 16px', borderRight: i < stats.length - 1 ? '1px solid rgba(201,162,39,0.12)' : 'none' }}>
                 <div style={{ color: 'var(--gold)', marginBottom: '10px' }}>{s.icon}</div>
                 <div style={{ fontFamily: 'var(--font-display)', fontWeight: 800, fontSize: 'clamp(1.8rem, 4vw, 2.6rem)', color: 'var(--gold-light)', lineHeight: 1 }}>
-                  <CountUp end={statsInView ? s.value : 0} duration={2.2} suffix={s.suffix} />
+                  <AnimatedNumber end={s.value} suffix={s.suffix} active={statsInView} />
                 </div>
                 <div style={{ color: 'var(--white-dim)', fontSize: '0.82rem', marginTop: '8px', fontWeight: 500, letterSpacing: '0.5px' }}>{s.label}</div>
               </motion.div>
@@ -281,7 +297,7 @@ export default function Home() {
                 <Link to="/book" className="btn btn-gold" style={{ fontSize: '1.05rem', padding: '16px 40px' }}>
                   <FaTruck /> Book a Truck Now
                 </Link>
-                <a href="tel:+919XXXXXXXXX" className="btn btn-outline" style={{ fontSize: '1.05rem', padding: '16px 36px' }}>
+                <a href="tel:+918446123777" className="btn btn-outline" style={{ fontSize: '1.05rem', padding: '16px 36px' }}>
                   <FaPhone /> Call Us Now
                 </a>
               </div>

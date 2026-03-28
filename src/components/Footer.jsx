@@ -35,7 +35,7 @@ export default function Footer() {
               Redefining Indian logistics since 2013. PAN India transport, tyre dealership & body fabrication under one trusted group.
             </p>
             <div style={{ display: 'flex', gap: '12px' }}>
-              <a href="https://wa.me/919XXXXXXXXX" target="_blank" rel="noopener noreferrer" style={{
+              <a href="https://wa.me/918446123777" target="_blank" rel="noopener noreferrer" style={{
                 width: 38, height: 38, borderRadius: '8px',
                 background: 'rgba(37,211,102,0.1)', border: '1px solid rgba(37,211,102,0.3)',
                 display: 'flex', alignItems: 'center', justifyContent: 'center',
@@ -43,7 +43,7 @@ export default function Footer() {
               }}>
                 <FaWhatsapp size={16} />
               </a>
-              <a href="mailto:info@tirupatiroadlines.com" style={{
+              <a href="mailto:tirupatiunion@gmail.com" style={{
                 width: 38, height: 38, borderRadius: '8px',
                 background: 'var(--gold-dim)', border: '1px solid var(--gold-border)',
                 display: 'flex', alignItems: 'center', justifyContent: 'center',
@@ -106,11 +106,11 @@ export default function Footer() {
               </div>
               <div style={{ display: 'flex', gap: '12px', alignItems: 'center' }}>
                 <FaPhone color="var(--gold)" size={14} />
-                <a href="tel:+919XXXXXXXXX" style={{ fontSize: '0.9rem', color: 'var(--white-dim)' }}>+91 9X XXXX XXXX</a>
+                <span style={{ fontSize: '0.9rem', color: 'var(--white-dim)' }}>+91 84461 23777 / +91 93712 37770</span>
               </div>
               <div style={{ display: 'flex', gap: '12px', alignItems: 'center' }}>
                 <FaEnvelope color="var(--gold)" size={14} />
-                <a href="mailto:info@tirupatiroadlines.com" style={{ fontSize: '0.9rem', color: 'var(--white-dim)' }}>info@tirupatiroadlines.com</a>
+                <a href="mailto:tirupatiunion@gmail.com" style={{ fontSize: '0.9rem', color: 'var(--white-dim)' }}>tirupatiunion@gmail.com</a>
               </div>
             </div>
 
@@ -122,9 +122,9 @@ export default function Footer() {
             }}>
               <div style={{ color: 'var(--gold)', fontWeight: 600, marginBottom: '8px', letterSpacing: '1px' }}>LEGAL DETAILS</div>
               <div style={{ color: 'var(--white-dim)', lineHeight: 2 }}>
-                GST: 27XXXXX0000X1ZX<br />
-                Udyam: UDYAM-MH-XX-XXXXXXX<br />
-                CIN: U60232MH2013PTC000000
+                GST: 27AMLPJ9316K2ZJ<br />
+                Udyam: UDYAM-MH-20-0015355<br />
+                PAN: AMLPJ9316K
               </div>
             </div>
           </div>

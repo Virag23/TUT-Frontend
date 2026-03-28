@@ -104,7 +104,7 @@ export default function IndustrialHub() {
                   </div>
                 ))}
                 <div style={{ display: 'flex', gap: '14px', marginTop: '32px', flexWrap: 'wrap' }}>
-                  <a href="tel:+919XXXXXXXXX" className="btn btn-gold"><FaPhone /> Call for Quote</a>
+                  <a href="tel:+918446123777" className="btn btn-gold"><FaPhone /> Call for Quote</a>
                   <Link to="/contact" className="btn btn-outline">Send Enquiry</Link>
                 </div>
               </motion.div>
