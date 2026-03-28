@@ -8,6 +8,7 @@ const navLinks = [
   { label: 'Home', path: '/' },
   { label: 'Fleet', path: '/fleet' },
   { label: 'Industrial Hub', path: '/hub' },
+  { label: 'Gallery', path: '/gallery' },
   { label: 'About', path: '/about' },
   { label: 'Contact', path: '/contact' },
 ];
@@ -39,9 +40,13 @@ export default function Navbar() {
     }}>
       <div className="container" style={{ height: '100%', display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
 
-        {/* Logo */}
+        {/* Logo + Name */}
         <Link to="/" style={{ display: 'flex', alignItems: 'center', gap: '12px', textDecoration: 'none' }}>
           <img src={LOGO} alt="Tirupati Road Lines Logo" style={{ height: '44px', width: 'auto', objectFit: 'contain' }} />
+          <div style={{ display: 'flex', flexDirection: 'column', lineHeight: 1.15 }}>
+            <span style={{ fontFamily: 'var(--font-heading)', fontWeight: 800, fontSize: '1.05rem', color: 'var(--white)', letterSpacing: '0.5px' }}>TIRUPATI</span>
+            <span style={{ fontFamily: 'var(--font-heading)', fontWeight: 600, fontSize: '0.62rem', color: 'var(--gold)', letterSpacing: '2px', textTransform: 'uppercase' }}>Road Lines Pvt. Ltd.</span>
+          </div>
         </Link>
 
         {/* Desktop Nav */}

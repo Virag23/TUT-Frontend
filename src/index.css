@@ -280,7 +280,115 @@ img { max-width: 100%; display: block; }
 /* ═══════════════════════════════════════════════
    RESPONSIVE
 ═══════════════════════════════════════════════ */
+
+/* About page office showcase */
+.about-showcase-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  height: 340px;
+}
+
 @media (max-width: 768px) {
-  .section { padding: 70px 0; }
+  .section { padding: 60px 0; }
   .container { padding: 0 16px; }
+
+  /* About showcase stacks vertically */
+  .about-showcase-grid {
+    grid-template-columns: 1fr;
+    height: auto;
+  }
+  .about-showcase-grid > div {
+    height: 220px;
+  }
+
+  /* Fleet division cards stack */
+  .fleet-card-grid {
+    grid-template-columns: 1fr !important;
+  }
+  .fleet-card-grid > div:first-child:not(:last-child) {
+    order: -1;
+  }
+
+  /* Contact grid stacks */
+  .contact-grid {
+    grid-template-columns: 1fr !important;
+  }
+
+  /* Form two-col fields stack */
+  .form-two-col {
+    grid-template-columns: 1fr !important;
+  }
+
+  /* Home image strip: 1 col on mobile */
+  .home-strip {
+    grid-template-columns: 1fr !important;
+    height: auto !important;
+  }
+  .home-strip > div {
+    height: 200px;
+  }
+
+  /* Stats: 2 cols on mobile */
+  .stats-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+  .stats-grid > div {
+    border-right: none !important;
+    border-bottom: 1px solid rgba(201,162,39,0.12);
+  }
+
+  /* Industrial hub tyre grid */
+  .hub-tyre-grid {
+    grid-template-columns: 1fr !important;
+    gap: 32px !important;
+  }
+
+  /* Body specs grid */
+  .body-specs-grid {
+    grid-template-columns: 1fr !important;
+  }
+
+  /* Timeline min-width fix */
+  .timeline-grid {
+    grid-template-columns: 1fr !important;
+  }
+
+  /* Leadership cards */
+  .leadership-grid {
+    grid-template-columns: 1fr !important;
+  }
+
+  /* Why us grid: 1 col */
+  .why-us-grid {
+    grid-template-columns: 1fr !important;
+  }
+
+  /* Buttons full width on small screens */
+  .btn-stack-mobile {
+    width: 100%;
+    justify-content: center;
+  }
+
+  /* Hero padding */
+  .hero-padding {
+    padding-top: 100px !important;
+    padding-bottom: 60px !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .section { padding: 48px 0; }
+  .container { padding: 0 14px; }
+
+  .stats-grid {
+    grid-template-columns: 1fr 1fr !important;
+  }
+
+  .about-showcase-grid > div {
+    height: 180px;
+  }
+
+  .home-strip > div {
+    height: 160px;
+  }
 }

@@ -18,7 +18,7 @@ function AnimatedNumber({ end, suffix, active }) {
   }, [active, end]);
   return <>{display}{suffix}</>;
 }
-import { FaTruck, FaIndustry, FaCog, FaArrowRight, FaCheckCircle, FaStar, FaPhone, FaWhatsapp } from 'react-icons/fa';
+import { FaTruck, FaIndustry, FaCog, FaArrowRight, FaCheckCircle, FaStar, FaPhone, FaWhatsapp, FaQuoteLeft } from 'react-icons/fa';
 import { MdLocalShipping, MdVerified, MdSpeed } from 'react-icons/md';
 
 const TRUCKS_IMG = 'https://res.cloudinary.com/djoafwyhn/image/upload/v1774711669/Trucks_j2c2bp.jpg';
@@ -42,9 +42,9 @@ function Section({ children, style }) {
 }
 
 const stats = [
-  { value: 100, suffix: '+',       label: 'Vehicles in Fleet',   icon: <FaTruck size={22} /> },
+  { value: 200, suffix: '+',       label: 'Vehicles in Fleet',   icon: <FaTruck size={22} /> },
   { value: 12,  suffix: '+',       label: 'Years Experience',     icon: <MdVerified size={22} /> },
-  { value: 33,  suffix: '.75 Cr+', label: 'Annual Turnover (₹)',  icon: <MdLocalShipping size={22} /> },
+  { value: 70,  suffix: ' Cr+',    label: 'Annual Turnover (₹)',  icon: <MdLocalShipping size={22} /> },
   { value: 500, suffix: '+',       label: 'Satisfied Clients',    icon: <FaStar size={22} /> },
   { value: 28,  suffix: '+',       label: 'States Covered',       icon: <MdSpeed size={22} /> },
 ];
@@ -70,7 +70,34 @@ const verticals = [
   },
 ];
 
-const partners = ['JK Tyre & Industries', 'Cavendish Industries', 'Avanish Logistics', 'Coal India Ltd.', 'NMDC Limited', 'Tata Steel'];
+const partners = [
+  'Sunflag Steel, Bhandara', 'Jagdamba Minerals, Mumbai', 'Eshan Minerals Pvt. Ltd.', 'Eshan Calci Private Limited',
+  'Omat West Limited', 'Chaman Metallics Ltd.', 'Denotics Inter. Pvt. Ltd.', 'Evonith Value Steel Ltd.',
+  'Excello Fin Lea Ltd.', 'Rajura Steel & Alloys Pvt. Ltd.', 'Sanvijay Rolling & Engg. Ltd.', 'Godawari Traders',
+  'Duli Trade & Commodities Ltd.', 'Grace Industries Ltd.', 'Viraj Metlinks Pvt. Ltd.', 'Shri Aandal Logistics',
+  'Jai Balaji Logistics', 'Vikas Coal and Minerals Pvt. Ltd.', 'Mahalaxmi TMT Pvt. Ltd.', 'Metal India Raipur',
+  'Prakash India Ltd.', 'Shri Bajrang Power & Ispat Ltd.', 'GR Minerals India Pvt. Ltd.', 'Sarda Energy & Minerals Ltd.',
+  'Gopani Iron', 'Aarti Sponge & Power Ltd.', 'Sai Sponge (India) Pvt. Ltd.', 'Giriraj Enterprises',
+  'Omat West Ltd.', 'Shree Lakhdataar Impex', 'Irometal Alloys India Pvt. Ltd.', 'Sanvijay Alloys & Power Limited',
+  'Lloyds Metals & Energy Ltd.', 'Mahavir Coal Corporation Pvt. Ltd.', 'Passary Minerals Madhya Pvt. Ltd.',
+  'G.R. Integrated Steel Pvt. Ltd.', 'Sarda Energy & Minerals Ltd. Raipur', 'Shree Shyam Sponge & Power Ltd.',
+  'Shree Sita Ispat and Power Ltd.', 'Gopani Iron and Power India Pvt. Ltd.',
+];
+
+const reviews = [
+  { name: 'Sunflag Steel', location: 'Bhandara', text: 'Tirupati Road Lines has been our go-to logistics partner for over 5 years. Their fleet reliability and on-time delivery record is unmatched in the region.', rating: 5 },
+  { name: 'Sarda Energy & Minerals Ltd.', location: 'Nagpur', text: 'Exceptional service quality. GPS tracking on every truck gives us real-time visibility. Highly recommend for bulk mineral transport.', rating: 5 },
+  { name: 'Lloyds Metals & Energy Ltd.', location: 'Chandrapur', text: 'We have been working with Tirupati Group for coal transport from Korba. Professional team, zero delays, and excellent communication throughout.', rating: 5 },
+  { name: 'GR Minerals India Pvt. Ltd.', location: 'Nagpur', text: 'Their JK Tyre dealership saved us significant downtime. Same-day fitment for our entire fleet. Great value and genuine products.', rating: 5 },
+  { name: 'Aarti Sponge & Power Ltd.', location: 'Maharashtra', text: 'Reliable, professional, and always on schedule. Tirupati Road Lines handles our iron ore logistics with precision every single time.', rating: 5 },
+  { name: 'Chaman Metallics Ltd.', location: 'Chandrapur', text: 'The body fabrication quality from Tirupati Body Works is outstanding. SAILMA 450 grade steel bodies that last years in harsh mining conditions.', rating: 5 },
+  { name: 'Evonith Value Steel Ltd.', location: 'Wardha', text: 'Trusted partner for our bulk transport needs. Their drivers are experienced, licensed, and always professional on the road.', rating: 5 },
+  { name: 'Shri Bajrang Power & Ispat Ltd.', location: 'Maharashtra', text: 'From booking to delivery, the entire process is seamless. Their digital platform makes tracking shipments incredibly easy.', rating: 5 },
+  { name: 'Gopani Iron', location: 'Nagpur', text: 'We have been associated with Tirupati Group for 4+ years. Their commitment to quality and timely service keeps us coming back.', rating: 5 },
+  { name: 'Rajura Steel & Alloys Pvt. Ltd.', location: 'Maharashtra', text: 'Outstanding logistics partner. Their 100+ vehicle fleet ensures we never face capacity issues even during peak demand seasons.', rating: 5 },
+  { name: 'Sanvijay Alloys & Power Ltd.', location: 'Chandrapur', text: 'Tirupati Road Lines delivers on every promise. Cargo insurance, GPS tracking, and dedicated account managers — truly a complete solution.', rating: 5 },
+  { name: 'Jagdamba Minerals', location: 'Mumbai', text: 'Excellent service for long-haul mineral transport. Their Paras Transport division handles our inter-state routes with great efficiency.', rating: 5 },
+];
 
 const whyUs = [
   'Real-time GPS tracking on every vehicle in our fleet',
@@ -155,7 +182,7 @@ export default function Home() {
       {/* ══════════════ STATS TICKER ══════════════ */}
       <section style={{ padding: '72px 0', background: 'linear-gradient(180deg, #0a0a18 0%, var(--charcoal-mid) 100%)', borderBottom: '1px solid rgba(201,162,39,0.12)' }}>
         <div className="container">
-          <div ref={statsRef} style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(160px, 1fr))', gap: '20px' }}>
+          <div ref={statsRef} style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(160px, 1fr))', gap: '20px' }} className="stats-grid">
             {stats.map((s, i) => (
               <motion.div key={i} initial={{ opacity: 0, y: 28 }} animate={statsInView ? { opacity: 1, y: 0 } : {}}
                 transition={{ delay: i * 0.08, duration: 0.55 }}
@@ -250,7 +277,7 @@ export default function Home() {
       </section>
 
       {/* ══════════════ IMAGE SHOWCASE STRIP ══════════════ */}
-      <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', height: '300px' }}>
+      <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', height: '300px' }} className="home-strip">
         {[TRUCK5_IMG, OFFICE_IMG, BODY2_IMG].map((src, i) => (
           <div key={i} style={{ overflow: 'hidden', position: 'relative' }}>
             <img src={src} alt="" style={{ width: '100%', height: '100%', objectFit: 'cover', transition: 'transform 0.6s ease' }}
@@ -263,6 +290,42 @@ export default function Home() {
           </div>
         ))}
       </div>
+
+      {/* ══════════════ REVIEWS ══════════════ */}
+      <section className="section" style={{ background: 'var(--charcoal)' }}>
+        <Section>
+          <div className="container">
+            <motion.div variants={fadeUp} style={{ marginBottom: '60px', textAlign: 'center' }}>
+              <span className="section-label">Client Testimonials</span>
+              <h2 className="section-title">Trusted by India's Leading Industries</h2>
+              <div className="gold-divider" style={{ margin: '16px auto 20px' }} />
+              <p className="section-subtitle" style={{ margin: '0 auto' }}>
+                40+ companies across steel, mining, and energy sectors trust Tirupati Road Lines for their logistics needs.
+              </p>
+            </motion.div>
+            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(300px, 1fr))', gap: '20px' }}>
+              {reviews.map((r, i) => (
+                <motion.div key={i} variants={fadeUp} className="glass-card"
+                  style={{ padding: '28px', display: 'flex', flexDirection: 'column', gap: '16px' }}>
+                  <FaQuoteLeft size={20} color="rgba(201,162,39,0.4)" />
+                  <p style={{ color: 'var(--white-dim)', fontSize: '0.92rem', lineHeight: 1.8, flex: 1, margin: 0 }}>
+                    {r.text}
+                  </p>
+                  <div style={{ display: 'flex', gap: '3px', marginTop: '4px' }}>
+                    {Array.from({ length: r.rating }).map((_, j) => (
+                      <FaStar key={j} size={12} color="var(--gold)" />
+                    ))}
+                  </div>
+                  <div style={{ borderTop: '1px solid rgba(201,162,39,0.15)', paddingTop: '14px' }}>
+                    <div style={{ fontFamily: 'var(--font-heading)', fontWeight: 700, fontSize: '0.95rem', color: 'var(--white)' }}>{r.name}</div>
+                    <div style={{ color: 'var(--gold)', fontSize: '0.75rem', letterSpacing: '1px', marginTop: '2px' }}>{r.location}</div>
+                  </div>
+                </motion.div>
+              ))}
+            </div>
+          </div>
+        </Section>
+      </section>
 
       {/* ══════════════ PARTNER TRUST BAR ══════════════ */}
       <section style={{ padding: '56px 0', background: 'var(--charcoal-mid)', borderTop: '1px solid rgba(201,162,39,0.1)', borderBottom: '1px solid rgba(201,162,39,0.1)' }}>

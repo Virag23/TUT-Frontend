@@ -101,12 +101,12 @@ export default function Footer() {
               <div style={{ display: 'flex', gap: '12px', alignItems: 'flex-start' }}>
                 <FaMapMarkerAlt color="var(--gold)" size={14} style={{ marginTop: '3px', flexShrink: 0 }} />
                 <span style={{ fontSize: '0.9rem', color: 'var(--white-dim)' }}>
-                  Nagpur – Bhandara Road, Nagpur, Maharashtra, India
+                  Plot No. 189/190, Kapsi (Khurd), Near Pardi Naka, Bhandara Road, Nagpur – 441108 (MH)
                 </span>
               </div>
               <div style={{ display: 'flex', gap: '12px', alignItems: 'center' }}>
                 <FaPhone color="var(--gold)" size={14} />
-                <span style={{ fontSize: '0.9rem', color: 'var(--white-dim)' }}>+91 84461 23777 / +91 93712 37770</span>
+                <span style={{ fontSize: '0.9rem', color: 'var(--white-dim)' }}>+91 8446123777 <br /> +91 9371237770</span>
               </div>
               <div style={{ display: 'flex', gap: '12px', alignItems: 'center' }}>
                 <FaEnvelope color="var(--gold)" size={14} />

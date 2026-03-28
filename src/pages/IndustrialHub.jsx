@@ -9,6 +9,11 @@ const B2 = 'https://res.cloudinary.com/djoafwyhn/image/upload/v1774711653/Body_5
 const B3 = 'https://res.cloudinary.com/djoafwyhn/image/upload/v1774711652/Body_4_i9di05.jpg';
 const B4 = 'https://res.cloudinary.com/djoafwyhn/image/upload/v1774711653/Body_7_b8nqhl.jpg';
 const ROLLER = 'https://res.cloudinary.com/djoafwyhn/image/upload/v1774711658/Roller_2_z2mdto.jpg';
+// JK Truck tyres & alignment — reliable sources
+const TYRE2 = 'https://res.cloudinary.com/djoafwyhn/image/upload/v1774719428/new_6_sdhaaa.png'; // truck tyre
+const TYRE3 = 'https://res.cloudinary.com/djoafwyhn/image/upload/v1774719428/new_7_go3ftw.png'; // truck wheel
+const TYRE4 = 'https://res.cloudinary.com/djoafwyhn/image/upload/v1774717352/new_4_hncwlv.jpg'; // tyre alignment mechanic
+const TYRE5 = 'https://res.cloudinary.com/djoafwyhn/image/upload/v1774719428/new_5_cfer7o.png'; // tyre service
 
 const fadeUp  = { hidden: { opacity: 0, y: 40 }, visible: { opacity: 1, y: 0, transition: { duration: 0.65 } } };
 const stagger = { hidden: {}, visible: { transition: { staggerChildren: 0.12 } } };
@@ -84,7 +89,7 @@ export default function IndustrialHub() {
       <section className="section" style={{ background: 'var(--charcoal-mid)' }}>
         <Section>
           <div className="container">
-            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(400px, 1fr))', gap: '56px', alignItems: 'start' }}>
+            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(400px, 1fr))', gap: '56px', alignItems: 'start' }} className="hub-tyre-grid">
 
               {/* Left — Info */}
               <motion.div variants={fadeUp}>
@@ -92,24 +97,24 @@ export default function IndustrialHub() {
                 <h2 className="section-title">JK Tyre Authorized Dealer</h2>
                 <div className="gold-divider" />
                 <p style={{ color: 'var(--white-dim)', lineHeight: 1.9, marginBottom: '24px' }}>
-                  Tirupati Road Lines Pvt. Ltd. is an authorized dealer of JK Tyre & Industries — India's No.1 commercial tyre brand. We stock and supply the complete range of TBR, OTR, bias, and solid tyres for all commercial vehicle applications.
+                  Tirupati Road Lines Pvt. Ltd. is an authorized dealer of JK Tyre &amp; Industries — India's No.1 commercial tyre brand. We stock and supply the complete range of TBR, OTR, bias, and solid tyres for all commercial vehicle applications.
                 </p>
                 <p style={{ color: 'var(--white-dim)', lineHeight: 1.9, marginBottom: '28px' }}>
                   Our expert technicians provide professional fitment, wheel alignment, balancing, and tyre retreading services. Fleet operators get dedicated pricing and priority fulfillment.
                 </p>
-                {['Genuine JK Tyre products with full manufacturer warranty', 'Expert technical consultation & fitment service', 'Bulk fleet pricing for operators with 10+ vehicles', 'Same-day fitment for most commercial sizes', 'Tyre retreading and maintenance contracts available'].map((f, i) => (
+                {['Genuine JK Tyre products with full manufacturer warranty', 'Expert technical consultation &amp; fitment service', 'Bulk fleet pricing for operators with 10+ vehicles', 'Same-day fitment for most commercial sizes', 'Tyre retreading and maintenance contracts available'].map((f, i) => (
                   <div key={i} style={{ display: 'flex', alignItems: 'flex-start', gap: '10px', marginBottom: '12px' }}>
                     <FaCheckCircle color="var(--gold)" size={14} style={{ marginTop: '3px', flexShrink: 0 }} />
                     <span style={{ color: 'var(--white-dim)', fontSize: '0.93rem', lineHeight: 1.6 }}>{f}</span>
                   </div>
                 ))}
-                <div style={{ display: 'flex', gap: '14px', marginTop: '32px', flexWrap: 'wrap' }}>
+                <div style={{ display: 'flex', gap: '14px', marginTop: '32px', marginBottom: '28px', flexWrap: 'wrap' }}>
                   <a href="tel:+918446123777" className="btn btn-gold"><FaPhone /> Call for Quote</a>
                   <Link to="/contact" className="btn btn-outline">Send Enquiry</Link>
                 </div>
               </motion.div>
 
-              {/* Right — Products */}
+              {/* Right — Badge + Images */}
               <motion.div variants={fadeUp}>
                 {/* JK Tyre Badge */}
                 <div className="glass-card" style={{ padding: '28px', marginBottom: '24px', background: 'linear-gradient(135deg, rgba(201,162,39,0.08), rgba(201,162,39,0.02))', borderColor: 'rgba(201,162,39,0.3)' }}>
@@ -118,27 +123,41 @@ export default function IndustrialHub() {
                       <FaCog color="#0d0d1a" size={26} />
                     </div>
                     <div>
-                      <div style={{ fontFamily: 'var(--font-heading)', fontSize: '1.4rem', color: 'var(--white)', fontWeight: 700 }}>JK Tyre & Industries</div>
+                      <div style={{ fontFamily: 'var(--font-heading)', fontSize: '1.4rem', color: 'var(--white)', fontWeight: 700 }}>JK Tyre &amp; Industries</div>
                       <div style={{ color: 'var(--gold)', fontSize: '0.75rem', letterSpacing: '2.5px', textTransform: 'uppercase', fontWeight: 700 }}>Authorized Dealership</div>
                     </div>
                   </div>
-                  <p style={{ color: 'var(--white-dim)', fontSize: '0.9rem', lineHeight: 1.7 }}>
-                    India's No. 1 commercial tyre brand. Trusted by 30+ Lakh vehicles across 100+ countries. 
+                  <p style={{ color: 'var(--white-dim)', fontSize: '0.9rem', lineHeight: 1.7, marginBottom: '16px' }}>
+                    India's No. 1 commercial tyre brand. Trusted by 30+ Lakh vehicles across 100+ countries.
                   </p>
-                </div>
-                <h4 style={{ fontFamily: 'var(--font-heading)', color: 'var(--gold)', fontSize: '1rem', letterSpacing: '1px', marginBottom: '16px' }}>PRODUCT RANGE</h4>
-                <div style={{ display: 'flex', flexDirection: 'column', gap: '10px' }}>
-                  {tyreProducts.map((t, i) => (
-                    <div key={i} className="glass-card" style={{ padding: '16px 20px', borderLeft: `3px solid ${t.color}` }}>
-                      <div style={{ display: 'flex', justifyContent: 'space-between', flexWrap: 'wrap', gap: '8px' }}>
-                        <div>
-                          <div style={{ fontWeight: 600, color: 'var(--white)', fontSize: '0.95rem', marginBottom: '3px' }}>{t.name}</div>
-                          <div style={{ color: 'var(--white-dim)', fontSize: '0.8rem' }}>{t.sizes}</div>
-                        </div>
-                        <span style={{ padding: '4px 12px', borderRadius: '20px', background: `${t.color}15`, border: `1px solid ${t.color}30`, color: t.color, fontSize: '0.75rem', fontWeight: 700, height: 'fit-content' }}>{t.use}</span>
-                      </div>
+                  <div style={{ display: 'flex', gap: '12px' }}>
+                    <div style={{ flex: 1, background: 'rgba(201,162,39,0.08)', border: '1px solid rgba(201,162,39,0.2)', borderRadius: '8px', padding: '12px', textAlign: 'center' }}>
+                      <div style={{ fontFamily: 'var(--font-heading)', fontSize: '1.4rem', fontWeight: 800, color: 'var(--gold)' }}>&#8377;120 Cr+</div>
+                      <div style={{ color: 'var(--white-dim)', fontSize: '0.72rem', letterSpacing: '1px', marginTop: '2px' }}>Annual Turnover</div>
                     </div>
-                  ))}
+                    <div style={{ flex: 1, background: 'rgba(201,162,39,0.08)', border: '1px solid rgba(201,162,39,0.2)', borderRadius: '8px', padding: '12px', textAlign: 'center' }}>
+                      <div style={{ fontFamily: 'var(--font-heading)', fontSize: '1.4rem', fontWeight: 800, color: 'var(--gold)' }}>10+</div>
+                      <div style={{ color: 'var(--white-dim)', fontSize: '0.72rem', letterSpacing: '1px', marginTop: '2px' }}>Years as Dealer</div>
+                    </div>
+                  </div>
+                </div>
+                {/* Tyre Image Gallery — 5 images */}
+                <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '10px' }}>
+                  <div style={{ borderRadius: '8px', overflow: 'hidden', aspectRatio: '16/9', gridColumn: '1 / -1' }}>
+                    <img src={TYRE4} alt="Tyre alignment" style={{ width: '100%', height: '100%', objectFit: 'cover', transition: 'transform 0.5s ease' }}
+                      onMouseEnter={e => e.currentTarget.style.transform = 'scale(1.05)'}
+                      onMouseLeave={e => e.currentTarget.style.transform = 'scale(1)'} />
+                  </div>
+                  <div style={{ borderRadius: '8px', overflow: 'hidden', aspectRatio: '4/3' }}>
+                    <img src={TYRE5} alt="Tyre fitting" style={{ width: '100%', height: '100%', objectFit: 'cover', transition: 'transform 0.5s ease' }}
+                      onMouseEnter={e => e.currentTarget.style.transform = 'scale(1.05)'}
+                      onMouseLeave={e => e.currentTarget.style.transform = 'scale(1)'} />
+                  </div>
+                  <div style={{ borderRadius: '8px', overflow: 'hidden', aspectRatio: '4/3' }}>
+                    <img src={TYRE3} alt="Truck wheel" style={{ width: '100%', height: '100%', objectFit: 'cover', transition: 'transform 0.5s ease' }}
+                      onMouseEnter={e => e.currentTarget.style.transform = 'scale(1.05)'}
+                      onMouseLeave={e => e.currentTarget.style.transform = 'scale(1)'} />
+                  </div>
                 </div>
               </motion.div>
             </div>
@@ -172,7 +191,7 @@ export default function IndustrialHub() {
             </motion.div>
 
             {/* Specs + Machinery */}
-            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(360px, 1fr))', gap: '40px' }}>
+            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(360px, 1fr))', gap: '40px' }} className="body-specs-grid">
               <motion.div variants={fadeUp}>
                 <h4 style={{ fontFamily: 'var(--font-heading)', fontSize: '1.15rem', color: 'var(--gold)', marginBottom: '20px', letterSpacing: '1px' }}>TECHNICAL SPECIFICATIONS</h4>
                 <div style={{ display: 'flex', flexDirection: 'column', gap: '10px' }}>
@@ -211,7 +230,7 @@ export default function IndustrialHub() {
                     <MdLocalShipping color="var(--gold)" size={22} />
                     <h4 style={{ fontFamily: 'var(--font-heading)', color: 'var(--white)', fontSize: '1.05rem' }}>Custom Orders Welcome</h4>
                   </div>
-                  <p style={{ color: 'var(--white-dim)', lineHeight: 1.8, marginBottom: '20px', fontSize: '0.9rem' }}>
+                  <p style={{ color: 'var(--white-dim)', lineHeight: 1.8, marginBottom: '16px', fontSize: '0.9rem' }}>
                     We design and fabricate bodies for any truck make — Tata, Ashok Leyland, Bharat Benz, Mahindra, Eicher. Delivery across India.
                   </p>
                   <Link to="/contact" className="btn btn-gold" style={{ display: 'inline-flex' }}>Get a Quote <FaArrowRight size={12} /></Link>

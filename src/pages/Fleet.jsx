@@ -8,6 +8,7 @@ const T1 = 'https://res.cloudinary.com/djoafwyhn/image/upload/v1774711669/Trucks
 const T2 = 'https://res.cloudinary.com/djoafwyhn/image/upload/v1774711665/Truck_5_hz70rd.jpg';
 const T3 = 'https://res.cloudinary.com/djoafwyhn/image/upload/v1774711663/Truck_4_xxlpdr.jpg';
 const T4 = 'https://res.cloudinary.com/djoafwyhn/image/upload/v1774711660/Truck_3_gf1fwo.jpg';
+const T5 = 'https://res.cloudinary.com/djoafwyhn/image/upload/v1774715441/new_3_glngts.jpg';
 const R1 = 'https://res.cloudinary.com/djoafwyhn/image/upload/v1774711658/Roller_1_buu4wm.jpg';
 const R2 = 'https://res.cloudinary.com/djoafwyhn/image/upload/v1774711658/Roller_2_z2mdto.jpg';
 const R3 = 'https://res.cloudinary.com/djoafwyhn/image/upload/v1774711658/Roller_3_vdvvkq.jpg';
@@ -35,6 +36,7 @@ const heavyVehicles = [
   { img: R1, label: 'Road Roller', desc: 'Heavy-duty road compaction equipment' },
   { img: R2, label: 'Tipper Body', desc: 'Custom SAILMA 450 grade steel body' },
   { img: R3, label: 'Compactor', desc: 'Industrial compaction machinery' },
+  { img: T5, label: 'Fleet on Road', desc: 'Tirupati fleet in active mineral transport' },
 ];
 
 const materials = [
@@ -65,7 +67,7 @@ export default function Fleet() {
           <motion.div initial="hidden" animate="visible" variants={stagger}>
             <motion.span variants={fadeUp} className="badge badge-gold" style={{ marginBottom: '20px', display: 'inline-block' }}>The Fleet</motion.span>
             <motion.h1 variants={fadeUp} style={{ fontFamily: 'var(--font-display)', fontSize: 'clamp(2.5rem, 7vw, 5rem)', fontWeight: 900, lineHeight: 1.05, marginBottom: '20px' }}>
-              <span style={{ color: 'var(--white)' }}>100+ Vehicles.</span><br />
+              <span style={{ color: 'var(--white)' }}>200+ Vehicles.</span><br />
               <span style={{ background: 'linear-gradient(135deg, var(--gold), var(--gold-light))', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text' }}>One Trusted Network.</span>
             </motion.h1>
             <motion.p variants={fadeUp} style={{ color: 'var(--white-dim)', fontSize: '1.1rem', maxWidth: '540px', lineHeight: 1.85 }}>
@@ -88,6 +90,7 @@ export default function Fleet() {
             <div style={{ display: 'flex', flexDirection: 'column', gap: '32px' }}>
               {fleets.map((f, i) => (
                 <motion.div key={i} variants={fadeUp}
+                  className="fleet-card-grid"
                   style={{ display: 'grid', gridTemplateColumns: i % 2 === 0 ? '1.2fr 1fr' : '1fr 1.2fr', gap: '0', borderRadius: 'var(--radius-md)', overflow: 'hidden', background: 'var(--charcoal-card)', border: '1px solid rgba(255,255,255,0.06)' }}>
                   {i % 2 !== 0 && (
                     <div style={{ overflow: 'hidden' }}>

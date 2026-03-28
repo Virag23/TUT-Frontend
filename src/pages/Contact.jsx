@@ -77,7 +77,7 @@ export default function Contact() {
       {/* Contact Grid */}
       <section className="section" style={{ background: 'var(--charcoal-mid)' }}>
         <div className="container">
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(340px, 1fr))', gap: '48px', alignItems: 'start' }}>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(340px, 1fr))', gap: '48px', alignItems: 'start' }} className="contact-grid">
             
             {/* Left — Info */}
             <div>
@@ -89,7 +89,7 @@ export default function Contact() {
 
                 <div style={{ display: 'flex', flexDirection: 'column', gap: '24px', marginBottom: '32px' }}>
                   {[
-                    { icon: <FaMapMarkerAlt />, label: 'Office Address', value: 'Plot No. 1, Tirupati Nagar, Nagpur–Bhandara Road, Nagpur, Maharashtra – 440 035, India' },
+                    { icon: <FaMapMarkerAlt />, label: 'Office Address', value: 'Plot No. 189/190, Kapsi (Khurd), Near Pardi Naka, Bhandara Road, Nagpur – 441 108, Maharashtra, India' },
                     { icon: <FaPhone />, label: 'Phone', value: '+91 84461 23777 / +91 93712 37770' },
                     { icon: <FaEnvelope />, label: 'Email', value: 'tirupatiunion@gmail.com' },
                     { icon: <FaClock />, label: 'Working Hours', value: 'Mon–Sat: 9:00 AM – 7:00 PM IST' },
@@ -151,7 +151,7 @@ export default function Contact() {
                   </motion.h2>
 
                   <div style={{ display: 'flex', flexDirection: 'column', gap: '20px' }}>
-                    <motion.div variants={fadeUp} style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '16px' }}>
+                    <motion.div variants={fadeUp} style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '16px' }} className="form-two-col">
                       <div className="form-group">
                         <label className="form-label">Full Name *</label>
                         <input name="senderName" value={form.senderName} onChange={handleChange} className="form-input" placeholder="Your name" required />

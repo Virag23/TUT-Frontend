@@ -8,6 +8,9 @@ const OFF1 = 'https://res.cloudinary.com/djoafwyhn/image/upload/v1774711654/Offi
 const OFF2 = 'https://res.cloudinary.com/djoafwyhn/image/upload/v1774711654/off_znurb5.jpg';
 const TRUCK = 'https://res.cloudinary.com/djoafwyhn/image/upload/v1774711669/Trucks_j2c2bp.jpg';
 
+const ACH1 = 'https://res.cloudinary.com/djoafwyhn/image/upload/v1774715440/new_1_yjmknd.jpg';
+const ACH2 = 'https://res.cloudinary.com/djoafwyhn/image/upload/v1774715441/new_2_zholwf.jpg';
+
 const fadeUp  = { hidden: { opacity: 0, y: 40 }, visible: { opacity: 1, y: 0, transition: { duration: 0.65 } } };
 const stagger = { hidden: {}, visible: { transition: { staggerChildren: 0.12 } } };
 
@@ -27,7 +30,7 @@ const timeline = [
   { year: '2017', title: 'JK Tyre Dealership', desc: 'Became an authorized JK Tyre & Industries dealership, launching the group\'s industrial diversification. This brought in a new revenue stream and reduced fleet downtime through in-house tyre supply.' },
   { year: '2019', title: 'Body Works Division Launched', desc: 'Tirupati Body Works was established with a dedicated fabrication unit at Nagpur equipped with CNC plasma cutting, hydraulic presses, and MIG welding stations.' },
   { year: '2021', title: 'Multi-Brand Operations', desc: 'Paras Transport and Bahuwali Logistics were launched as independent subsidiaries to address long-haul and heavy haulage requirements — taking total fleet strength beyond 80 vehicles.' },
-  { year: '2023', title: '100+ Vehicle Milestone', desc: 'Crossed the 100+ vehicle milestone with annual turnover surpassing ₹33.75 Crore. Active operations across 28+ states. Added GPS tracking to the entire fleet.' },
+  { year: '2023', title: '200+ Vehicle Milestone', desc: 'Crossed the 200+ vehicle milestone with annual turnover surpassing ₹70 Crore. Active operations across 28+ states. Added GPS tracking to the entire fleet.' },
   { year: '2025', title: 'Digital & Online Presence', desc: 'Launched a digital operations platform with online truck booking, live cargo tracking, and client dashboards. Expanded partnerships with Cavendish Industries and Avanish Logistics.' },
 ];
 
@@ -37,8 +40,8 @@ const directors = [
     role: 'Managing Director & CEO',
     initials: 'BJ',
     color: '#c9a227',
-    bio: 'A first-generation entrepreneur who founded Tirupati Road Lines in 2013 with a vision to modernize bulk commodity transport from Central India. With 12+ years of hands-on experience in fleet operations and business development, Bharat has grown the company from 5 trucks to a 100+ vehicle conglomerate. He leads strategic partnerships, fleet acquisition, and business expansion.',
-    achievements: ['Founded TRL in 2013 with seed capital', 'Secured Coal India & NMDC contracts', 'Led JK Tyre dealership tie-up', 'Expanded to PAN India operations'],
+    bio: 'A first-generation entrepreneur who founded Tirupati Road Lines in 2013 with a vision to modernize bulk commodity transport from Central India. With 12+ years of hands-on experience in fleet operations and business development, Bharat has grown the company from 5 trucks to a 200+ vehicle conglomerate. He leads strategic partnerships, fleet acquisition, and business expansion.',
+    achievements: ['Founded TRL in 2013 with seed capital', 'Secured Coal India & NMDC contracts', 'Led JK Tyre dealership tie-up', 'Expanded to 200+ vehicles PAN India'],
   },
   {
     name: 'Bahuwali Rajkumar Jain',
@@ -46,7 +49,7 @@ const directors = [
     initials: 'BJ',
     color: '#4facfe',
     bio: 'The operational force behind Tirupati Group, Bahuwali oversees day-to-day fleet management, driver recruitment, workshop operations, and the Body Works fabrication unit. His deep technical expertise in vehicle mechanics, body fabrication, and logistics routing has built the group\'s reputation for reliability and zero-compromise quality standards.',
-    achievements: ['Heads Body Works fabrication unit', 'Manages 100+ vehicle operations', 'Pioneered GPS fleet tracking rollout', 'Oversees driver training program'],
+    achievements: ['Heads Body Works fabrication unit', 'Manages 200+ vehicle operations', 'Pioneered GPS fleet tracking rollout', 'Oversees driver training program'],
   },
 ];
 
@@ -83,7 +86,7 @@ export default function About() {
               <span style={{ background: 'linear-gradient(135deg, var(--gold), var(--gold-light))', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text' }}>Driven by Ambition.</span>
             </motion.h1>
             <motion.p variants={fadeUp} style={{ color: 'var(--white-dim)', fontSize: '1.1rem', maxWidth: '540px', lineHeight: 1.85 }}>
-              From 5 trucks in 2013 to 100+ vehicles and ₹33.75 Cr+ in annual turnover — a family-built enterprise powering India's industrial backbone.
+              From 5 trucks in 2013 to 200+ vehicles and ₹70 Cr+ in annual turnover — a family-built enterprise powering India's industrial backbone.
             </motion.p>
           </motion.div>
         </div>
@@ -91,7 +94,7 @@ export default function About() {
 
       {/* Office Showcase */}
       <section style={{ padding: '0' }}>
-        <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', height: '340px' }}>
+        <div className="about-showcase-grid">
           <div style={{ overflow: 'hidden', position: 'relative' }}>
             <img src={OFF1} alt="Office" style={{ width: '100%', height: '100%', objectFit: 'cover', transition: 'transform 0.6s ease' }}
               onMouseEnter={e => e.currentTarget.style.transform = 'scale(1.05)'}
@@ -141,7 +144,7 @@ export default function About() {
               <h2 className="section-title">12 Years of Consistent Growth</h2>
               <div className="gold-divider" />
             </motion.div>
-            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(560px, 1fr))', gap: '0 60px' }}>
+            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(560px, 1fr))', gap: '0 60px' }} className="timeline-grid">
               <div style={{ position: 'relative', paddingLeft: '28px' }}>
                 <div style={{ position: 'absolute', left: 0, top: 0, bottom: 0, width: '2px', background: 'linear-gradient(180deg, var(--gold) 0%, rgba(201,162,39,0.1) 100%)' }} />
                 {timeline.map((t, i) => (
@@ -172,7 +175,7 @@ export default function About() {
               <div className="gold-divider" />
               <p className="section-subtitle">Led by two brothers who built the Tirupati Group from the ground up — with zero outside capital and 100% dedication.</p>
             </motion.div>
-            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(340px, 1fr))', gap: '28px' }}>
+            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(340px, 1fr))', gap: '28px' }} className="leadership-grid">
               {directors.map((d, i) => (
                 <motion.div key={i} variants={fadeUp} className="glass-card" style={{ padding: '40px 32px', borderTop: `3px solid ${d.color}` }}>
                   <div style={{ display: 'flex', alignItems: 'center', gap: '16px', marginBottom: '24px' }}>
@@ -193,6 +196,39 @@ export default function About() {
                       <span style={{ color: 'var(--white-dim)', fontSize: '0.88rem' }}>{a}</span>
                     </div>
                   ))}
+                </motion.div>
+              ))}
+            </div>
+          </div>
+        </Section>
+      </section>
+
+      {/* Achievements */}
+      <section className="section" style={{ background: 'var(--charcoal)' }}>
+        <Section>
+          <div className="container">
+            <motion.div variants={fadeUp} style={{ marginBottom: '48px' }}>
+              <span className="section-label">Recognition</span>
+              <h2 className="section-title">Achievements & Awards</h2>
+              <div className="gold-divider" />
+              <p className="section-subtitle">Milestones and recognition that reflect our commitment to excellence in Indian logistics.</p>
+            </motion.div>
+            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '24px' }}>
+              {[ACH1, ACH2].map((src, i) => (
+                <motion.div key={i} variants={fadeUp}
+                  style={{ borderRadius: 'var(--radius-md)', overflow: 'hidden', border: '1px solid rgba(201,162,39,0.25)', background: 'var(--charcoal-card)' }}>
+                  <div style={{ overflow: 'hidden', aspectRatio: '4/3' }}>
+                    <img src={src} alt={`Achievement ${i + 1}`}
+                      style={{ width: '100%', height: '100%', objectFit: 'cover', transition: 'transform 0.5s ease' }}
+                      onMouseEnter={e => e.currentTarget.style.transform = 'scale(1.06)'}
+                      onMouseLeave={e => e.currentTarget.style.transform = 'scale(1)'} />
+                  </div>
+                  <div style={{ padding: '20px 24px', borderTop: '2px solid rgba(201,162,39,0.3)' }}>
+                    <div style={{ color: 'var(--gold)', fontSize: '0.72rem', letterSpacing: '2px', textTransform: 'uppercase', marginBottom: '6px' }}>Achievement</div>
+                    <div style={{ fontFamily: 'var(--font-heading)', color: 'var(--white)', fontSize: '1rem', fontWeight: 600 }}>
+                      {i === 0 ? 'Industry Recognition Award' : 'Excellence in Logistics'}
+                    </div>
+                  </div>
                 </motion.div>
               ))}
             </div>
