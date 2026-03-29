@@ -171,12 +171,7 @@ export default function Home() {
           </motion.div>
         </div>
 
-        {/* Scroll line */}
-        <div style={{ position: 'absolute', bottom: '36px', left: '50%', transform: 'translateX(-50%)', display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '8px', color: 'rgba(245,245,240,0.35)', fontSize: '0.7rem', letterSpacing: '3px' }}>
-          <span>SCROLL</span>
-          <motion.div animate={{ y: [0, 10, 0] }} transition={{ repeat: Infinity, duration: 1.6 }}
-            style={{ width: 1.5, height: 44, background: 'linear-gradient(180deg, var(--gold), transparent)', borderRadius: '1px' }} />
-        </div>
+        
       </section>
 
       {/* ══════════════ STATS TICKER ══════════════ */}
